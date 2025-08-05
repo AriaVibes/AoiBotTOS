@@ -4,77 +4,564 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aoi Bot - Terms of Service and Privacy Policy</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #2d1b3d 0%, #3d2454 50%, #4a2c5a 100%);
+            color: #e8dae8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .effective-date {
+            font-style: italic;
+            opacity: 0.8;
+            font-size: 0.95em;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.03);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #ff6b9d;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 107, 157, 0.3);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-number {
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            color: #0a0a0a;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 0.8em;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #d5c7d5;
+        }
+
+        .section ul {
+            margin: 15px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #c7b5c7;
+        }
+
+        .section li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #ff87a8;
+            font-size: 0.8em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(196, 69, 105, 0.1));
+            border: 1px solid rgba(255, 107, 157, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(196, 69, 105, 0.15));
+            border: 1px solid rgba(255, 107, 157, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            color: #ff6b9d;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        a {
+            color: #ff6b9d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ff87a8;
+            text-decoration: underline;
+        }
+
+        .privacy-header {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 3px solid rgba(255, 107, 157, 0.3);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 152, 0, 0.1));
+            border: 1px solid rgba(255, 193, 7, 0.4);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-card h4 {
+            color: #ff87a8;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .data-table {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .data-table h4 {
+            background: linear-gradient(45deg, rgba(255, 107, 157, 0.2), rgba(196, 69, 105, 0.2));
+            padding: 15px;
+            margin: 0;
+            color: #ff6b9d;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.3);
+        }
+
+        .data-table-content {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5em;
+            }
+            
+            .section-number {
+                width: 30px;
+                height: 30px;
+                font-size: 0.7em;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Aoi Bot - Terms of Service</h1>
-        <div class="section">
-            <h2>User Agreement</h2>
-            <p>By using any of Aoi Bot's commands or adding it to your Discord Server, you agree to comply with these terms and conditions. You must be at least 13 years old to use Aoi Bot, in accordance with <a href="https://discord.com/terms" target="_blank">Discord’s Terms of Service</a>.</p>
+        <div class="header">
+            <h1>Aoi Bot</h1>
+            <h2 style="color: #d5c7d5; margin-bottom: 20px;">Terms of Service & Privacy Policy</h2>
+            <!-- <div class="effective-date">
+                Effective Date: [INSERT DATE - e.g., January 15, 2025]<br>
+                Last Updated: [INSERT DATE - same as effective date initially]
+            </div> -->
         </div>
 
-        <div class="section">
-            <h2>Usage Guidelines</h2>
-            <p>Users must not use Aoi Bot for any unlawful purposes or activities that violate <a href="https://discord.com/terms" target="_blank">Discord’s Terms of Service</a>. You are responsible for the content and actions taken using Aoi Bot whether in servers or direct messages. Users must not use Aoi Bot for:</p>
-            <p>• Sexually explicit or vulgar content in commands</p>
-            <p>• Harassment or bullying of other users</p>
-            <p>• Spam or malicious command usage</p>
-            <p>• Any content that could be harmful or inappropriate</p>
-            <p>Violations may result in termination of access.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">1</span>
+                User Agreement
+            </h2>
+            <div class="section">
+                <p>By using any of Aoi Bot's commands or adding it to your Discord server, you agree to these terms. You must be at least 13 years old to use Aoi Bot, following <a href="https://discord.com/terms" target="_blank">Discord's Terms of Service</a>.</p>
+                <div class="warning-box">
+                    <strong>Note:</strong> If you don't agree to these terms, please don't use Aoi Bot.
+                </div>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Data Collection</h2>
-            <p>Aoi Bot collects and stores User IDs, Server IDs, and Channel IDs solely for operational purposes related to providing specific bot functionalities, such as server setup, welcome/goodbye channels, and leaderboards. Server IDs and Channel IDs are stored only for the servers where Aoi Bot is present and is deleted once it leaves that server. User IDs are retained solely for marriage features and can be deleted automatically by using the divorce command.</p>
-            <p>All Commands are also logged for safety and debugging purposes, User Ids, Server Ids, and Channel IDs are included in these logs as well as the contents of commands.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">2</span>
+                Usage Guidelines
+            </h2>
+            <div class="section">
+                <p>Users are responsible for their use of Aoi Bot. The bot must not be used for anything that violates <a href="https://discord.com/terms" target="_blank">Discord's Terms of Service</a> or applicable laws. Prohibited uses include:</p>
+                <ul>
+                    <li>Sexually explicit or inappropriate content in commands</li>
+                    <li>Harassment or bullying of other users</li>
+                    <li>Spam or excessive command usage</li>
+                    <li>Harmful, illegal, or inappropriate content</li>
+                    <li>Attempts to exploit or manipulate the bot</li>
+                    <li>Using the bot to distribute malware or scams</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Limitation of Liability</h2>
-            <p>Aoi Bot is provided "as is" without warranties of any kind, including accuracy, reliability, or suitability for any purpose. We are not liable for any damages or losses arising from the use or inability to use Aoi Bot.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">3</span>
+                Rate Limits & Fair Use
+            </h2>
+            <div class="section">
+                <p>To maintain optimal performance, Aoi Bot implements the following limits:</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>🕐 Global Limit</h4>
+                        <p>20 commands per minute per user</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>⏱️ Command Cooldowns</h4>
+                        <p>Individual command cooldowns ranging from 1-5 seconds for basic commands to several minutes for complex operations</p>
+                    </div>
+                </div>
+                <p>Excessive abuse may result in temporary or permanent restrictions.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Termination</h2>
-            <p>We reserve the right to terminate or suspend access to Aoi Bot at any time without prior notice or liability, particularly for violations of these terms or if we choose to discontinue the bot.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">4</span>
+                Data Collection
+            </h2>
+            <div class="section">
+                <p>Aoi Bot collects minimal data necessary for functionality. The following information is stored:</p>
+                
+                <div class="data-table">
+                    <h4>🏠 Server Configuration</h4>
+                    <div class="data-table-content">
+                        <p><strong>For Server Owners:</strong> Server settings including welcome/goodbye channels and messages, auto-roles, special channels (memes, facts), and birthday configurations.</p>
+                        <p><strong>For Users:</strong> Birthday information (month, day, year) when set in servers with birthday features enabled.</p>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <h4>💑 Marriage System</h4>
+                    <div class="data-table-content">
+                        <p><strong>Per-Server Basis:</strong> Marriage partnerships between users within specific servers. Data is automatically deleted when either partner leaves the server, uses the divorce command, or when the bot leaves the server.</p>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <h4>👤 User Data</h4>
+                    <div class="data-table-content">
+                        <p>Privacy agreement status, 8ball command warnings, and reminder system data (reminder content, timing, and repeat settings).</p>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <h4>🛡️ Administrative Data</h4>
+                    <div class="data-table-content">
+                        <p>Blacklisted servers/users and disabled commands for development & moderation purposes.</p>
+                    </div>
+                </div>
+
+                <div class="data-table">
+                    <h4>📝 Activity Logs</h4>
+                    <div class="data-table-content">
+                        <p>Command usage, server joins/leaves, and error logs are sent to private Discord channels for debugging and monitoring purposes.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Governing Law</h2>
-            <p>These terms shall be governed by and construed in accordance with the laws of Australia, Victoria.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">5</span>
+                Data Retention
+            </h2>
+            <div class="section">
+                <ul>
+                    <li><strong>Server Configuration:</strong> Deleted when Aoi Bot leaves the server</li>
+                    <li><strong>Marriage Data:</strong> Deleted when either partner leaves the server, divorce command is used, or bot leaves server</li>
+                    <li><strong>User Reminders:</strong> Deleted when reminder expires or is manually removed</li>
+                    <li><strong>Activity Logs:</strong> Retained in Discord channels indefinitely, unless Aoi was to shut down</li>
+                    <li><strong>Error Logs:</strong> Deleted once the corresponding issue is resolved</li>
+                </ul>
+            </div>
         </div>
 
-        <h1>Aoi Bot - Privacy Policy</h1>
-        <div class="section">
-            <h2>Information Collection</h2>
-            <p>Aoi Bot collects and stores User IDs, Server IDs, and Channel IDs solely for operational purposes related to providing specific functionalities within Discord servers. All data is deleted upon leaving a server, and User IDs for marriages are deleted upon divorce.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">6</span>
+                Intellectual Property
+            </h2>
+            <div class="section">
+                <p>Aoi Bot's code, features, and functionality are protected intellectual property. Users are granted a limited license to use the bot in accordance with these terms but may not copy, reverse engineer, or create derivative works.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Data Usage</h2>
-            <p>Collected data is used solely to facilitate and enhance features such as server setup, welcome/goodbye channels, and leaderboards. No personal content is stored.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">7</span>
+                Disclaimer of Warranties
+            </h2>
+            <div class="section">
+                <p>Aoi Bot is provided "as is" without warranties of any kind. No guarantee is made regarding uptime, accuracy, or fitness for any particular purpose. Use is at your own risk.</p>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Data Security</h2>
-            <p>We implement measures to protect collected data from unauthorized access, alteration, disclosure, or destruction.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">8</span>
+                Enforcement & Termination
+            </h2>
+            <div class="section">
+                <p>Violations of these terms may result in:</p>
+                <ul>
+                    <li><strong>Blacklist:</strong> Blocked from using Aoi and its features. Can be appealed</li>
+                    <li><strong>Permanent Blacklist:</strong> Blocked from using Aoi and its features and banned from the <a href="https://discord.gg/WWwbZfUCGd" target="_blank">Discord Support Server</a>. Cannot be appealed</li>
+                </ul>
+                <div class="highlight-box">
+                    Appeals can be submitted by joining the <a href="https://discord.gg/WWwbZfUCGd" target="_blank">Discord Support Server</a> and creating a support ticket.
+                </div>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Data Sharing</h2>
-            <p>Aoi Bot does not share collected data with third parties unless required by law or necessary for operational purposes related to providing and improving bot services.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">9</span>
+                Terms Updates
+            </h2>
+            <div class="section">
+                <p>When these terms are updated:</p>
+                <ul>
+                    <li>The next command use will display an update notification embed</li>
+                    <li>Users must re-agree to terms via button interaction to continue using commands</li>
+                    <li>Major changes will be announced in the <a href="https://discord.gg/WWwbZfUCGd" target="_blank">Discord Support Server</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>User Rights</h2>
-            <p>Users can delete their User IDs associated with marriages by using the divorce command. All other data is removed automatically when Aoi Bot leaves a server.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">10</span>
+                Data Security & Breach Response
+            </h2>
+            <div class="section">
+                <p>Reasonable security measures are implemented to protect stored data. In the event of a data breach:</p>
+                <ul>
+                    <li>Announcements will be made in the <a href="https://discord.gg/WWwbZfUCGd" target="_blank">Discord Support Server</a></li>
+                    <li>Given the non-sensitive nature of stored data, individual notifications are not required</li>
+                    <li>Joining the <a href="https://discord.gg/WWwbZfUCGd" target="_blank">Discord Support Server</a> is recommended to stay up-to-date</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Changes to This Policy</h2>
-            <p>We reserve the right to update or modify this Privacy Policy at any time. Updates will be communicated through our Discord server or other appropriate means. Continued use of the bot implies acceptance of any changes.</p>
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">11</span>
+                User Rights
+            </h2>
+            <div class="section">
+                <p>Users have the right to:</p>
+                <ul>
+                    <li><strong>Data Deletion:</strong> Remove marriage data via divorce command or request complete data removal</li>
+                    <li><strong>Data Access:</strong> Request information about stored personal data</li>
+                    <li><strong>Data Portability:</strong> Receive data in a readable format upon request</li>
+                    <li><strong>Correction:</strong> Request correction of inaccurate data where applicable</li>
+                </ul>
+            </div>
         </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">12</span>
+                Governing Law
+            </h2>
+            <div class="section">
+                <p>These terms are governed by the laws of Victoria, Australia. Users agree to indemnify the bot operator against claims arising from their use of the service.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>📞 Support & Contact</h3>
+            <p>For support, privacy requests, appeals, or questions:</p>
+            <p><strong>Join the Discord server at <a href="https://discord.gg/WWwbZfUCGd" target="_blank">https://discord.gg/WWwbZfUCGd</a> and create a support ticket</strong></p>
+            <!-- <p>Response time: [INSERT TIMEFRAME - e.g., "24-48 hours"]</p> -->
+        </div>
+
+        <div class="privacy-header header">
+            <h1>🔒 Privacy Policy</h1>
+            <!-- <div class="effective-date">
+                Same effective date as Terms of Service above
+            </div> -->
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">1</span>
+                Information Not Collected
+            </h2>
+            <div class="section">
+                <p>Aoi Bot does <strong>not</strong> collect:</p>
+                <ul>
+                    <li>Message content (except direct commands)</li>
+                    <li>Personal identifying information (email, real names, addresses)</li>
+                    <li>Sensitive personal data</li>
+                    <li>Financial information</li>
+                    <li>Data unnecessary for bot functionality</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">2</span>
+                Information Collection Details
+            </h2>
+            <div class="section">
+                <p>Data collection is limited to operational necessities:</p>
+                <ul>
+                    <li><strong>Discord Identifiers:</strong> User, server, and channel IDs for feature functionality</li>
+                    <li><strong>Configuration Data:</strong> Server settings, user preferences, and feature configurations</li>
+                    <li><strong>Usage Logs:</strong> Command usage and server activity for debugging and security</li>
+                    <li><strong>Temporary Data:</strong> Reminders and time-based features</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">3</span>
+                Data Usage
+            </h2>
+            <div class="section">
+                <p>Collected data is used exclusively for:</p>
+                <ul>
+                    <li>Providing bot functionality and features</li>
+                    <li>Debugging technical issues and improving performance</li>
+                    <li>Security monitoring and abuse prevention</li>
+                    <li>Legal compliance when required by law</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">4</span>
+                Data Sharing
+            </h2>
+            <div class="section">
+                <p>Data is not sold, traded, or shared with third parties except when:</p>
+                <ul>
+                    <li>Required by legal process or court order</li>
+                    <li>Necessary to prevent harm or protect user safety</li>
+                    <li>Required for technical support from Discord or hosting providers</li>
+                    <li>Involved in business transfer (with user notification)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">5</span>
+                International Data Processing
+            </h2>
+            <div class="section">
+                <p>As Discord operates globally, data may be processed across international boundaries. Use of Aoi Bot constitutes consent to such international data transfers with appropriate safeguards in place.</p>
+            </div>
+        </div> -->
+
+        <div class="content-section">
+            <h2 class="section-title">
+                <span class="section-number">5</span>
+                Children's Privacy
+            </h2>
+            <div class="section">
+                <p>Aoi Bot does not knowingly collect data from users under 13 years old. If such collection is discovered, the data will be promptly deleted.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>🔐 Privacy Inquiries</h3>
+            <p>For privacy-related concerns or data requests:</p>
+            <p><strong>Join <a href="https://discord.gg/WWwbZfUCGd" target="_blank">https://discord.gg/WWwbZfUCGd</a> and create a support ticket marked "Privacy Request"</strong></p>
+        </div>
+
+        <!-- <div class="footer">
+            <p style="opacity: 0.7;">Last updated: [INSERT LAST UPDATED DATE]</p>
+        </div> -->
     </div>
 </body>
 </html>
